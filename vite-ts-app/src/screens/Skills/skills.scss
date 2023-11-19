@@ -1,0 +1,82 @@
+@import "src/App.scss";
+
+.section-features {
+  padding: 25rem 0;
+  background: #2c3e50; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to top,
+    #dde4e5,
+    #b6d9e3,
+    #8fcbe6
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to top,
+    #dde4e5,
+    #b6d9e3,
+    #8fcbe6
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  background-size: cover;
+  transform: skewY(-7deg);
+  margin-top: -15rem;
+
+  & > * {
+    transform: skewY(7deg);
+  }
+
+  @include respond(tab-port) {
+    padding: 10rem 0;
+  }
+}
+
+.feature-box {
+  background-color: rgba($color-white, 0.8);
+  font-size: 1.5rem;
+  padding: 2.5rem;
+  text-align: center;
+  border-radius: 3px;
+  box-shadow: 0 1.5rem 4rem rgba($color-black, 0.15);
+  transition: transform 0.3s;
+
+  @include respond(tab-port) {
+    padding: 2rem;
+  }
+
+  &__icon {
+    font-size: 8rem;
+    display: inline-block;
+    background-image: linear-gradient(
+      to right,
+      $color-primary-light,
+      $color-primary-dark
+    );
+    -webkit-background-clip: text;
+    color: transparent;
+
+    @include respond(tab-port) {
+      margin-bottom: 0;
+    }
+  }
+
+  &:hover {
+    transform: translateY(-1.5rem) scale(1.03);
+  }
+}
+.opentowork {
+  font-size: 4rem;
+  margin-left: 30rem;
+  font-family: "Brush Script MT";
+  transform: skewY(-15deg) skewX(27deg);
+  background-image: linear-gradient(
+    to right,
+    $color-primary-light,
+    $color-primary-dark
+  );
+  color: transparent;
+  -webkit-background-clip: text;
+  @include respond(tab-port) {
+    width: max-content;
+    margin-left: 0;
+    font-size: 1rem;
+  }
+}

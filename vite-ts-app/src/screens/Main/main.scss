@@ -1,0 +1,62 @@
+@import "src/App.scss";
+// @import 'loaders.css/src/animations/pacman.scss';
+
+.loader-hidden {
+  display: none;
+}
+.loader-active {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.main-section {
+  background-size: cover;
+  height: 100vh;
+
+  @include respond(tab-port) {
+  }
+}
+
+.title {
+  display: none;
+
+  @include respond(tab-port) {
+    display: block;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    color: #dde4e5;
+    text-shadow: 0 0 2px gray;
+    text-transform: uppercase;
+  }
+
+  @include respond(phone) {
+    font-size: 7rem;
+  }
+}
+
+.loading {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background: $color-grey-light-1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.loading-bar-container {
+  width: 15rem;
+  height: 32px;
+  border-radius: 2rem;
+  background: white;
+}
+
+.loading-bar {
+  height: 32px;
+  background: $color-primary-light;
+}
