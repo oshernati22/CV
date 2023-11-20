@@ -17,7 +17,7 @@ function Main() {
     <div className="main-section" id="main">
       <h1 className="title">Osher Nati</h1>
 
-      <Canvas camera={{ position: [-5, 2, 10], fov: 60 }}>
+      {/* <Canvas camera={{ position: [-5, 2, 10], fov: 60 }}>
         <Sky />
         <Stars />
         <ambientLight intensity={1.5} />
@@ -34,7 +34,7 @@ function Main() {
         <ThreeD posx={7} posy={4} posz={1} url="/laptop.gltf" size={0.7} />
         <ThreeD posx={6} posy={-1} posz={2} url="/mac.gltf" size={0.7} />
         <ThreeD posx={-8} posy={1} posz={-2} url="/tent.gltf" size={1.5} />
-      </Canvas>
+      </Canvas> */}
     </div>
   );
 }
