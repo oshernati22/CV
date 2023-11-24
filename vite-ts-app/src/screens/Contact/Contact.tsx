@@ -2,7 +2,7 @@ import React from "react";
 
 import "./contact.scss";
 import emailjs, { init } from "@emailjs/browser";
-import { Link } from "react-scroll";
+import { Link } from "react-router-dom";
 
 const Contact: React.FC = () => {
   init("aawSMP5dktj9X4RHG"); // Initialize emailjs with your user ID
@@ -11,7 +11,7 @@ const Contact: React.FC = () => {
     e.preventDefault();
     const target = e.target as HTMLFormElement;
     emailjs.sendForm("service_bqx7crp", "template_ju647gk", target).then(
-      (result) => {
+      () => {
         alert("The message was received");
         target.reset();
       },

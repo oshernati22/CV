@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { Link } from "react-scroll";
 import "./Navbar.scss";
 
@@ -32,13 +32,13 @@ function Navbar() {
         id="navi-toogle"
       />
 
-      <label for="navi-toogle" className="navigation__button">
-        <span class="navigation__icon">&nbsp;</span>
+      <label htmlFor="navi-toogle" className="navigation__button">
+        <span className="navigation__icon">&nbsp;</span>
       </label>
 
       <div className="navigation__background">&nbsp;</div>
 
-      <navigator id="icon" className="navigation__nav">
+      <nav id="icon" className="navigation__nav">
         <ul className="navigation__list">
           <li className="navigation__item">
             <Link
@@ -111,7 +111,7 @@ function Navbar() {
             </Link>
           </li>
         </ul>
-      </navigator>
+      </nav>
     </div>
   );
 }

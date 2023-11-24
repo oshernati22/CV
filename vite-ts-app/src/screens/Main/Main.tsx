@@ -1,16 +1,16 @@
-import React from "react";
-import { Suspense, useRef } from "react";
-import {
-  Sky,
-  Stars,
-  CameraControls,
-  CameraControlsProps,
-  OrbitControls,
-} from "@react-three/drei";
-import Boy from "../../components/Boy/Boy";
-import ThreeD from "../../components/ThreeD/ThreeD";
-import "./main.scss";
-import { Canvas } from "@react-three/fiber";
+// import React from "react";
+// import { Suspense, useRef } from "react";
+// import {
+//   Sky,
+//   Stars,
+//   CameraControls,
+//   CameraControlsProps,
+//   OrbitControls,
+// } from "@react-three/drei";
+// import Boy from "../../components/Boy/Boy";
+// import ThreeD from "../../components/ThreeD/ThreeD";
+// import "./main.scss";
+// import { Canvas } from "@react-three/fiber";
 
 function Main() {
   return (

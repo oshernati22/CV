@@ -1,5 +1,3 @@
-import { Route, Routes } from "react-router-dom";
-
 import About from "./screens/About/About";
 import Skills from "./screens/Skills/Skills";
 import Projects from "./screens/Projects/Projects";
