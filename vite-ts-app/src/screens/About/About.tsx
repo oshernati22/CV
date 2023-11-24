@@ -1,7 +1,7 @@
 import "./about.scss";
-import photo1 from "./osherphoto1.jpeg";
-import photo2 from "./osherphoto2.jpeg";
-import photo3 from "./osherphoto3.jpeg";
+import photo1 from "./osherPhoto1.jpeg";
+import photo2 from "./osherPhoto2.jpeg";
+import photo3 from "./osherPhoto3.jpeg";
 
 const About = () => {
   return (
