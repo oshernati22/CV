@@ -1,7 +1,7 @@
 import "./about.scss";
-import photo1 from "vite-ts-app/src/screens/About/osherphoto1.jpeg";
-import photo2 from "vite-ts-app/src/screens/About/osherphoto2.jpeg";
-import photo3 from "vite-ts-app/src/screens/About/osherphoto3.jpeg";
+import photo1 from "./osherphoto1.jpeg";
+import photo2 from "./osherphoto2.jpeg";
+import photo3 from "./osherphoto3.jpeg";
 
 const About = () => {
   return (
