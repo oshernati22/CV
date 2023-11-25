@@ -5,6 +5,7 @@ import typescript from "vite-plugin-typescript";
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react(), typescript()],
+
   optimizeDeps: {
     exclude: [
       "three/examples/jsm/controls/DeviceOrientationControls",
