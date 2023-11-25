@@ -2,7 +2,7 @@ import React from "react";
 
 import "./contact.scss";
 import emailjs, { init } from "@emailjs/browser";
-import { Link } from "react-router-dom";
+import { Link } from "react-scroll";
 
 const Contact: React.FC = () => {
   init("aawSMP5dktj9X4RHG"); // Initialize emailjs with your user ID
