@@ -1,7 +1,8 @@
 import React, { useRef, useEffect } from "react";
-import { GLTF, GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
+
 import { Group, Object3D } from "three";
 import { useFrame } from "@react-three/fiber";
+import { GLTF, GLTFLoader } from "three/examples/jsm/Addons.js";
 
 interface ThreeDProps {
   posx: number;
@@ -32,7 +33,8 @@ const ThreeD: React.FC<ThreeDProps> = ({
     if (!gltfCache.current[url]) {
       gltfLoader.load(
         url,
-        (gltf: GLTF) => {
+        (gltfData) => {
+          const gltf = gltfData as GLTF;
           const model = gltf.scene.clone();
           gltfCache.current[url] = model;
 
@@ -41,7 +43,7 @@ const ThreeD: React.FC<ThreeDProps> = ({
           }
         },
         undefined,
-        (error: ErrorEvent) => {
+        (error: unknown) => {
           console.error("Error loading GLTF:", error);
         }
       );
