@@ -1,5 +1,4 @@
 import React, { useRef, useEffect } from "react";
-
 import { Group, Object3D } from "three";
 import { useFrame } from "@react-three/fiber";
 import { GLTF, GLTFLoader } from "three/examples/jsm/Addons.js";
@@ -30,10 +29,10 @@ const ThreeD: React.FC<ThreeDProps> = ({
   const gltfLoader = new GLTFLoader();
 
   useEffect(() => {
-    if (!gltfCache.current[url]) {
-      gltfLoader.load(
-        url,
-        (gltfData) => {
+    const loadModel = async () => {
+      if (!gltfCache.current[url]) {
+        try {
+          const gltfData = await gltfLoader.loadAsync(url);
           const gltf = gltfData as GLTF;
           const model = gltf.scene.clone();
           gltfCache.current[url] = model;
@@ -41,20 +40,20 @@ const ThreeD: React.FC<ThreeDProps> = ({
           if (group.current) {
             group.current.add(model);
           }
-        },
-        undefined,
-        (error: unknown) => {
+        } catch (error: unknown) {
           console.error("Error loading GLTF:", error);
         }
-      );
-    } else {
-      if (group.current) {
-        const cachedModel = gltfCache.current[url]?.clone();
-        if (cachedModel) {
-          group.current.add(cachedModel);
+      } else {
+        if (group.current) {
+          const cachedModel = gltfCache.current[url]?.clone();
+          if (cachedModel) {
+            group.current.add(cachedModel);
+          }
         }
       }
-    }
+    };
+
+    loadModel();
   }, [url]);
 
   useEffect(() => {
