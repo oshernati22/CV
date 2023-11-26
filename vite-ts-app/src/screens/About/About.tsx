@@ -16,7 +16,7 @@ const About = () => {
           <div className="col-1-of-2">
             <h3 className="heading-tertairy u-margin-bottom-small">About Me</h3>
             <p className="paragraph">
-              A highly motivated FULL STACK developer,{" "}
+              A highly motivated FULL STACK developer, A {""}
               <span className="word">Creative</span> thinker who takes the
               initiative for any challenge.
               <br />

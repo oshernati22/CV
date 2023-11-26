@@ -3,22 +3,25 @@ import React from "react";
 import "./contact.scss";
 import emailjs, { init } from "@emailjs/browser";
 import { Link } from "react-scroll";
+import dotenv from "dotenv";
 
 const Contact: React.FC = () => {
-  init("aawSMP5dktj9X4RHG"); // Initialize emailjs with your user ID
+  init(import.meta.env.VITE_USER_ID!); // Initialize emailjs with your user ID
 
   function sendEmail(e: React.FormEvent) {
     e.preventDefault();
     const target = e.target as HTMLFormElement;
-    emailjs.sendForm("service_bqx7crp", "template_ju647gk", target).then(
-      () => {
-        alert("The message was received");
-        target.reset();
-      },
-      (error) => {
-        console.log(error.text);
-      }
-    );
+    emailjs
+      .sendForm(import.meta.env.VITE_SERVICE_ID!, "template_ju647gk", target)
+      .then(
+        () => {
+          alert("The message was received");
+          target.reset();
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
   }
 
   return (
