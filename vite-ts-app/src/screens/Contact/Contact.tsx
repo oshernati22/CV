@@ -3,7 +3,6 @@ import React from "react";
 import "./contact.scss";
 import emailjs, { init } from "@emailjs/browser";
 import { Link } from "react-scroll";
-import dotenv from "dotenv";
 
 const Contact: React.FC = () => {
   init(import.meta.env.VITE_USER_ID!); // Initialize emailjs with your user ID
